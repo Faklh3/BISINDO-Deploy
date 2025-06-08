@@ -179,5 +179,6 @@ def predict():
     return jsonify({'gesture': gesture, 'confidence': confidence})
 
 if __name__ == '__main__':
-    # debug=True hanya untuk development lokal
-    app.run()
+    # Hanya untuk pengembangan lokal. Railway menggunakan gunicorn.
+    app.run(debug=True)
+
